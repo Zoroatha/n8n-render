@@ -1,0 +1,43 @@
+services:
+  - type: web
+    name: n8n-self-hosted
+    env: docker
+    plan: free
+    envVars:
+      - key: DB_TYPE
+        value: postgresdb
+      - key: DB_POSTGRESDB_HOST
+        value: dpg-d12bafumcj7s73f6rfsg-a
+      - key: DB_POSTGRESDB_PORT
+        value: 5432
+      - key: DB_POSTGRESDB_DATABASE
+        value: n8n_db_i4yu
+      - key: DB_POSTGRESDB_USER
+        value: n8n_db_i4yu_user
+      - key: DB_POSTGRESDB_PASSWORD
+        value: gHLMbPJ8p2SrtJHsTWcDyCPEwGrGd9DJ
+
+      - key: N8N_BASIC_AUTH_ACTIVE
+        value: "true"
+      - key: N8N_BASIC_AUTH_USER
+        value: cesarathdiaz@gmail.com
+      - key: N8N_BASIC_AUTH_PASSWORD
+        value: Atahualpa04140601506
+
+      - key: N8N_HOST
+        value: n8n-self-hosted.onrender.com
+      - key: N8N_PROTOCOL
+        value: https
+      - key: N8N_TIMEZONE
+        value: America/Bogota
+      - key: N8N_EDITOR_BASE_URL
+        value: https://n8n-self-hosted.onrender.com
+
+      - key: N8N_DIAGNOSTICS_ENABLED
+        value: "false"
+      - key: N8N_PERSONALIZATION_ENABLED
+        value: "false"
+      - key: N8N_EXTERNAL_BACKEND
+        value: "true"
+      - key: N8N_LOG_LEVEL
+        value: info
